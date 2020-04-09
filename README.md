@@ -4,11 +4,11 @@
 1. Install node.js
 2. Install mysql
 3. Create database with name `admin_panel_template` and set root password `123456789` if you want to use different database name and password please change database name and passowrd form `config/config.js` as well as database 
-4. Go to project directory terminal run `npm install` 
-5. Install nodemon if use linux  `sudo npm install -g --force nodemon`
-6. Build project by run in terminal `npm run build-dev`
-7. Open another terminal and run nodemon by `nodemon` 
-8. If all setup is okay project will be run in `http://localhost:4000/`
+4. Go to project directory terminal run `npm install` it will install all dependency to run this project 
+5. Install nodemon if use linux  `sudo npm install -g --force nodemon` to run backend 
+6. Open an Terminal and Build project by run thi command `npm run build-dev`
+7. Open another terminal and run nodemon by `nodemon` to run backend 
+8. If all setup is okay project will be run in `http://localhost:4000/` check it in browser
 9. if project not run successfully then again from no 1 
 
 If need any help contact `https://www.upwork.com/freelancers/~01c4dc03a059fe7fcb`
