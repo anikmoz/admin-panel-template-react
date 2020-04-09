@@ -25,12 +25,6 @@ module.exports = {
         include: S_PATH,
         exclude: /node_modules/,
         query: {presets : ['@babel/react', '@babel/preset-env']}
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: ['eslint-loader'],
-        include: S_PATH
       }
     ]
   }
