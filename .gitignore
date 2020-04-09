@@ -1,0 +1,6 @@
+node_modules/
+*.log
+config/config.js
+.vscode/
+.DS_Store
+public/static/js/bundle.js
