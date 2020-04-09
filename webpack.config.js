@@ -1,12 +1,10 @@
 const webpack = require('webpack');
 
-/**
- * By default environment will be production and debug will be false
- */
+
 const mode = process.env.NODE_ENV || 'production';
-//const debug = mode !== 'production';
 
 const S_PATH = __dirname + '/public/src';
+
 
 module.exports = {
   mode: mode,
@@ -16,16 +14,35 @@ module.exports = {
     path : __dirname + '/public' + '/static/js',
     filename : 'bundle.js'
   },
-  plugins: [new webpack.LoaderOptionsPlugin({ options: {} })],
-  module : {
-    rules : [
+  module: {
+    rules: [
       {
-        test : /\.js$/,
-        loader: 'babel-loader',
+        test: [/\.js$/], // include .js files
+        enforce: 'pre', // preload the jshint loader
+        exclude: /node_modules/, // exclude any and all files in the `node_modules folder`
         include: S_PATH,
-        exclude: /node_modules/,
-        query: {presets : ['@babel/react', '@babel/preset-env']}
+
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-env',
+                '@babel/preset-react',
+              ],
+              plugins: [
+                '@babel/plugin-syntax-dynamic-import',
+                '@babel/plugin-proposal-class-properties'
+              ]
+            }
+
+          },
+
+        ]
       }
     ]
   }
 };
+
+
+

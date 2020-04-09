@@ -1,22 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-/*import {
-  Segment
-} from 'semantic-ui-react';*/
+import {connect} from 'react-redux';
+
 
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
+    this.generateText = this.generateText.bind(this);
   }
+
+  generateText = () => {
+    return ['asb', 'abd', 'ewe', 'ewe'];
+  };
 
   render() {
     return (
       <div>
-        Hello world
+        {this.generateText().map((text, index) => (
+            <div key={index}>{text}</div>
+          )
+        )}
       </div>
     );
   }
+
 }
 
 Dashboard.propTypes = {
