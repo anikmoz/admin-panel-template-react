@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    this.generateText = this.generateText.bind(this);
   }
 
   generateText = () => {
