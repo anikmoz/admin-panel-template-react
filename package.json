@@ -5,7 +5,7 @@
   "main": "./bin/www",
   "scripts": {
     "start": "export NODE_ENV=development && pm2 start ./bin/www",
-    "test": "eslint . && mocha test/**/**/*.js --exit",
+    "test": "",
     "build": "webpack --watch",
     "build-dev": "export NODE_ENV=development && webpack --watch",
     "build-sass": "gulp sass:watch"
@@ -26,7 +26,7 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^1.7.0",
-    "react": "^16.4.2",
+    "react": "^16.13.1",
     "react-autobind": "^1.0.6",
     "react-dom": "^16.13.1",
     "react-redux": "^5.1.2",
@@ -50,15 +50,12 @@
     "expect.js": "^0.3.1",
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.1",
-    "mocha": "^5.2.0",
     "regenerator-runtime": "^0.12.1",
     "supertest": "^3.1.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.1.0"
   },
-  "directories": {
-    "test": "test"
-  },
+  "directories": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/varunon9/admin-panel-template-react.git"
