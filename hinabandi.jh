@@ -1,0 +1,44 @@
+entity Profile{
+    name String,
+    swiftCode String,
+    country String,
+    state String,
+    city String,
+    street String
+    province String,
+    postalCode String,
+    contact String,
+    email String
+}
+
+entity Category{
+    name String,
+}
+
+entity BookSetup {
+	name String,
+    writter String,
+    publishDate LocalDate,
+    cover  ImageBlob
+}
+
+entity BookDetails {
+    eng BigDecimal,
+    ur Integer,
+    fa BigDecimal,
+    audio ImageBlob
+}
+
+relationship ManyToOne {
+    BookDetails{bookSetups(name)} to BookSetup 
+    BookSetup{categories(name)} to Category 
+}
+
+relationship OneToOne {
+    Profile{user(login)} to User 
+}
+
+paginate BookSetup, BookDetails, Category  with pagination
+
+service all with serviceImpl
+
